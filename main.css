@@ -1,0 +1,11 @@
+
+.alert-box {
+    background-color: rgb(172, 172, 219);
+    color: blue;
+    padding: 20px;
+    border-radius: 5px;
+    /* display: none;  평소에는 숨기고 싶을때 */
+    /* display: block; 웹상에 보여주고 싶을때 */
+    display: none;
+
+}
