@@ -8,13 +8,22 @@
 <body>
 
     <div class="alert-box" id="alert">Alert 박스</div> 
-    <button onclick="document.getElementById('alert').style.display = 'none'">닫기</button>
-    <button onclick="document.getElementById('alert').style.display = 'block'; ">버튼</button>
+    <button onclick="알림창닫기()">닫기</button>
+    <!-- <button onclick="document.getElementById('alert').style.display = 'block'; ">버튼</button>      원래 이렇게 길에 표현되었으나, 함수 표현하려면 밑에 식으로 간단히 표기 가능! -->   
+    <button onclick="알림창열기()">버튼</button>                <!--아래 함수 사용으로 위의 긴 문장을 축약해서 표현할 수 있다! -->
     
 
     <script>
 
-    
+    function 알림창열기() {
+        document.getElementById('alert').style.display = 'block';
+    }
+    // 알림창열기();
+
+    function 알림창닫기() {
+        document.getElementById('alert').style.display = 'none';
+    }
+    // 알림창닫기();
 
     </script>
 
