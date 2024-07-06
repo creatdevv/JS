@@ -12,27 +12,31 @@
 <button onclick="알림창열기('none')">X</button>
 </div> 
 
-    <button onclick="알림창1열기()">버튼1</button>            
-    <button onclick="알림창2열기()">버튼2</button>            
+    <button onclick="알림창1열기('아이디입력해라')">버튼1</button>            
+    <button onclick="알림창1열기('비밀번호를입력해라')">버튼2</button>            
     
 
     <script>
 
-    function 알림창1열기() { 
+    function 알림창1열기(구멍) { 
         // 1. 제목 바꾸기
-        document.getElementById('title').innerHTML = '아이디를 입력하세요';
+        document.getElementById('title').innerHTML = 구멍;
         // 2. 열기
         document.getElementById('alert').style.display = 'block';
-
     }
 
-    function 알림창2열기() { 
-        // 1. 제목 바꾸기
-        document.getElementById('title').innerHTML = '비밀번호를 입력하세요';
-        // 2. 열기
-        document.getElementById('alert').style.display = 'block';
+    // 알림창1열기('아이디입력해라');
+    // 알림창1열기('비밀번호를입력해라');    // 파라미터문법 사용해서 이 2개가 위로 올라가서 불러오면서 기능별로 설정 가능!(이건 주석처리! 왜냐면 알림창 나오는게 아니라 그대로 열려있기 때문에!)
 
-    }
+
+
+    // function 알림창2열기() { 
+    //     // 1. 제목 바꾸기
+    //     document.getElementById('title').innerHTML = '비밀번호를 입력하세요';
+    //     // 2. 열기
+    //     document.getElementById('alert').style.display = 'block';
+
+    // }
     </script>
 
 </body>
