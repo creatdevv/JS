@@ -7,24 +7,26 @@
 </head>
 <body>
 
-<div class="alert-box" id="alert">
+<div class="alert-box" id="alert" style="display:none;">
     <p id="title">Alert 박스</p> 
-<button id="close">X</button>
+    <button id="close">X</button>
 </div> 
 
-    <button onclick="알림창1열기('아이디입력해라')">버튼1</button>            
-    <button onclick="알림창1열기('비밀번호를입력해라')">버튼2</button>            
-    
+<button onclick="알림창1열기('아이디를 입력하세요')">버튼1</button>            
+<button onclick="알림창1열기('비밀번호를 입력하세요')">버튼2</button>            
 
-    <script> 
+<script>
+    // 알림창을 열고 메시지를 업데이트하는 함수
+    function 알림창1열기(메시지) {
+        document.getElementById('title').innerHTML = 메시지;
+        document.getElementById('alert').style.display = 'block';
+    }
 
-        document.getElementById('close').addEventListener('click',function(){           // 여기서 'click'은 event임~!(종류 여러가지)
-        document.getElementById('alert').style.display= 'none';
-
-        })
-
-
-    </script>
+    // X 버튼을 클릭했을 때 알림창을 닫는 이벤트 리스너
+    document.getElementById('close').addEventListener('click', function() {
+        document.getElementById('alert').style.display = 'none';
+    });
+</script>
 
 </body>
 </html>
